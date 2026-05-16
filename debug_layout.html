@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Layout</title>
+    <link rel="stylesheet" href="debug_layout.css">
+</head>
+<body>
+    <main class="page">
+        <section class="panel">
+            <h1>Debug CSS Layout</h1>
+            <p>Phần broken dùng content-box mặc định để chứng minh content bị đẩy xuống dòng.</p>
+            <div class="container broken">
+                <aside class="sidebar">Sidebar 300px + padding 20px</aside>
+                <div class="content">Content 660px + padding 30px</div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Cách sửa 1 - border-box</h2>
+            <div class="container fix-borderbox">
+                <aside class="sidebar">Sidebar giữ width 300px</aside>
+                <div class="content">Content giữ width 660px</div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Cách sửa 2 - không dùng border-box</h2>
+            <div class="container fix-contentbox">
+                <aside class="sidebar">Sidebar width 258px</aside>
+                <div class="content">Content width 598px</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

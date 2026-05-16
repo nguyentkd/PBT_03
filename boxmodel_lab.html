@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lab</title>
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+    <main class="lab-shell">
+        <section class="lab-section">
+            <h1>Box Model Lab</h1>
+            <p>Hai hộp cùng width 300px, padding 20px, border 5px nhưng box-sizing khác nhau.</p>
+
+            <div class="box-row">
+                <article class="box-demo content-box-demo">
+                    <span class="badge">content-box</span>
+                    <div class="sample">Hộp 1</div>
+                    <p>Width khai báo 300px nhưng phần hiển thị bị phình ra bởi padding và border.</p>
+                </article>
+
+                <article class="box-demo border-box-demo">
+                    <span class="badge">border-box</span>
+                    <div class="sample">Hộp 2</div>
+                    <p>Width 300px bao gồm luôn padding và border nên tổng không đổi.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2>Layout 3 cột - content-box</h2>
+            <p>Trường hợp này cố tình để overflow vì padding không được tính vào tổng 1000px.</p>
+            <div class="three-col three-col-contentbox">
+                <aside class="col sidebar">Sidebar 250px + padding 15px</aside>
+                <div class="col content">Content 500px + padding 20px</div>
+                <aside class="col ads">Ads 250px + padding 15px</aside>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2>Layout 3 cột - border-box</h2>
+            <p>Ba cột giữ nguyên width khai báo nhưng padding được co vào trong.</p>
+            <div class="three-col three-col-borderbox">
+                <aside class="col sidebar">Sidebar 250px + padding 15px</aside>
+                <div class="col content">Content 500px + padding 20px</div>
+                <aside class="col ads">Ads 250px + padding 15px</aside>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
