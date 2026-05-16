@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Test</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+            background: #f6f8fb;
+            color: #1f2937;
+            margin: 0;
+            padding: 24px;
+        }
+
+        #app {
+            max-width: 960px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        .top-bar {
+            padding: 24px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+        }
+
+        .top-bar.dark h1 {
+            margin: 0 0 12px;
+            font-size: 2rem;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-right: 16px;
+            font-weight: 600;
+        }
+
+        nav a.active {
+            color: #f59e0b;
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 24px;
+            display: grid;
+            gap: 20px;
+        }
+
+        article.product {
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 20px;
+            background: #f8fafc;
+        }
+
+        article.product.featured {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+        }
+
+        .price {
+            font-size: 1.25rem;
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        article > p {
+            margin-bottom: 0;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .legend div {
+            border: 1px dashed #cbd5e1;
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="top-bar dark">
+            <h1>ShopTLU</h1>
+            <nav>
+                <a href="/" class="active">Home</a>
+                <a href="/products">Products</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+
+        <main>
+            <article class="product">
+                <h2>iPhone 16</h2>
+                <p class="price">25.990.000đ</p>
+                <p>Mô tả sản phẩm...</p>
+            </article>
+
+            <article class="product featured">
+                <h2>MacBook Pro</h2>
+                <p class="price">45.990.000đ</p>
+                <p>Mô tả sản phẩm...</p>
+            </article>
+
+            <section class="legend">
+                <div><strong>h1</strong> → ShopTLU</div>
+                <div><strong>.price</strong> → hai giá sản phẩm</div>
+                <div><strong>#app header</strong> → toàn bộ header</div>
+                <div><strong>nav a:first-child</strong> → Home</div>
+                <div><strong>.product.featured h2</strong> → MacBook Pro</div>
+                <div><strong>article &gt; p</strong> → mọi p trực tiếp trong article</div>
+                <div><strong>a[href="/"]</strong> → Home</div>
+                <div><strong>.top-bar.dark h1</strong> → ShopTLU</div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

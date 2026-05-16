@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity Battle</title>
+    <link rel="stylesheet" href="specificity.css">
+</head>
+<body>
+    <main class="arena">
+        <section class="hero">
+            <p class="kicker">Specificity Battle</p>
+            <h1>10 rules, 1 element, 1 final color</h1>
+            <p class="intro">Mục tiêu là quan sát rule nào thắng khi specificity tăng dần.</p>
+        </section>
+
+        <section class="demo-frame">
+            <div class="playground frame">
+                <p id="demo" class="text highlight">Hello World</p>
+            </div>
+        </section>
+
+        <section class="rule-board">
+            <div><strong>1.</strong> `*`</div>
+            <div><strong>2.</strong> `p`</div>
+            <div><strong>3.</strong> `.text`</div>
+            <div><strong>4.</strong> `.highlight`</div>
+            <div><strong>5.</strong> `p.text`</div>
+            <div><strong>6.</strong> `p.highlight`</div>
+            <div><strong>7.</strong> `.playground p`</div>
+            <div><strong>8.</strong> `#demo`</div>
+            <div><strong>9.</strong> `.playground #demo`</div>
+            <div><strong>10.</strong> `body .frame .playground p#demo.text.highlight`</div>
+        </section>
+    </main>
+</body>
+</html>
